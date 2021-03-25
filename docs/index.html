@@ -20,7 +20,17 @@
 
   <!-- Custom styles for this template -->
   <link href="startbootstrap-clean-blog-gh-pages/css/clean-blog.min.css" rel="stylesheet">
+<style>
+  .card-img-top {
+    /*width: 100%;*/
+    height: 15vw;
+    object-fit: cover;
 
+}
+  .list-groupdiv{
+    text-decoration: none;
+  }
+</style>
 </head>
 
 <body>
@@ -62,7 +72,7 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('startbootstrap-clean-blog-gh-pages/img/home-bg.jpg')">
+  <header class="masthead" style="background-image: url('startbootstrap-clean-blog-gh-pages/img/dockerIndex.jpeg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -81,30 +91,56 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-preview">
-          <a href="container.html">
+          <a>
             <h2 class="post-title">
               What to expect with this website
             </h2>
              <hr>
-            <h3 class="post-subtitle">
-              Problems look mighty small from 150 miles up
-            </h3>
+            <p class="post-meta">
+              This webpage is a part of course work(IS601),
+              We will learn basics of docker and how to integrate it with our system. <br>
+              The following are the key points that we will cover throught this website.
+
+              <ul class="list-groupdiv">
+            <a href="aboutDOcker.html"><li>What is Docker</li></a>
+            <a href="virtualization.html"><li>What is virtualization</li></a>
+            <a href="container.html"><li>What is containerization</li></a>
+            <a href="comparision.html"><li>Comparison between virtualization and containerization </li></a>
+            <a href="dockerSetup.html"><li>Tutorial on how to setup a web server on our local computer using docker</li></a>
+            <a href="basicCommands.html"><li>List of basic Linux commands and what they do</li></a>
+            <a href="dockerPycharm.html"><li>Tutorial about how to connect Docker with Pycharm to write python code</li></a>
+
+          </ul>
+
+            </p>
           </a>
-          <p class="post-meta">Posted by
-            <a href="#">Start Bootstrap</a>
-            on September 24, 2019</p>
+
         </div>
 
         <div class="post-preview">
-          <a href="container.html">
+          <a>
             <h2 class="post-title">
               Team
             </h2>
             <hr>
+            <div class="card" style="width: 18rem; display:inline-flex;">
+  <img src="startbootstrap-clean-blog-gh-pages/img/ImageYan.jpg" class="card card-img-top" alt="ImageYan">
+  <div class="card-body">
+    <p class="card-text" style="padding-bottom: 30px">Yan Yan
+    </p>
+    <a href="https://www.linkedin.com/in/yan-yan-b196ba54/"><button class="btn btn-primary" >LinkedIn Profile</button></a>
+  </div>
+</div> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <div class="card" style="width: 18rem; display:inline-flex;">
+  <img src="startbootstrap-clean-blog-gh-pages/img/RimpalSuthar.png" class="card card-img-top" alt="RimpalImage">
+  <div class="card-body">
+    <p class="card-text">Rimpalbahen Suthar</p>
+    <a href="https://www.linkedin.com/in/rimpal-suthar/"><button class="btn btn-primary" >LinkedIn Profile</button></a>
+  </div>
+</div>
+
           </a>
-          <p class="post-meta">Posted by
-            <a href="#">Start Bootstrap</a>
-            on September 18, 2019</p>
+
         </div>
 
 
