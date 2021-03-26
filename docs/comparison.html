@@ -3,96 +3,151 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
 
-  <title>Docker, Linux, and Containerization</title>
+    <title>Docker, Linux, and Containerization</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="startbootstrap-clean-blog-gh-pages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="startbootstrap-clean-blog-gh-pages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom fonts for this template -->
-  <link href="startbootstrap-clean-blog-gh-pages/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Custom fonts for this template -->
+    <link href="startbootstrap-clean-blog-gh-pages/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+          type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
 
-  <!-- Custom styles for this template -->
-  <link href="startbootstrap-clean-blog-gh-pages/css/clean-blog.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="startbootstrap-clean-blog-gh-pages/css/clean-blog.min.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Home</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="aboutDOcker.html">Docker</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="virtualization.html">Virtualization</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="container.html">Containerization</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="comparison.html">Virtualization v/s Containerization</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="dockerSetup.html">Setup docker</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="basicCommands.html">Basic linux commands</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="dockerPycharm.html">Setup docker with Pycharm</a>
-          </li>
-        </ul>
-      </div>
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" data-toggle="collapse"
+                type="button">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutDOcker.html">Docker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="virtualization.html">Virtualization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="container.html">Containerization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comparison.html">Virtualization v/s Containerization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dockerSetup.html">Setup docker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="basicCommands.html">Basic linux commands</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dockerPycharm.html">Setup docker with Pycharm</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
 
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url('startbootstrap-clean-blog-gh-pages/img/home-bg.jpg')">
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('startbootstrap-clean-blog-gh-pages/img/comparebackground.jpeg')">
     <div class="overlay"></div>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h3></h3>
-            <span class="subheading"></span>
-          </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h3>Virtualization vs Containerization</h3>
+                    <span class="subheading"></span>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </header>
+</header>
 
- <!-- Footer -->
-  <footer>
+<div class="col-lg-8 col-md-10 mx-auto">
+    <h4>Virtualization vs Containerization</h4>
+    <hr>
+
+    <p>After taking a look at each of these technologies, the question is, which one should be used? The answer is that
+        it depends on several different points. Essentially, each business and application will have different needs,
+        requirements, and purpose. The choice of virtualization versus containerization depends on the business
+        development and operational model, and the way applications are written and produced. Both are software
+        technologies that create self-contained virtual packages, but to choose the one that will best suit the user’s
+        needs, we will look at the following points.
+
+    </p>
+    <img alt="docker" src="startbootstrap-clean-blog-gh-pages/img/compare.png"
+         style="width:80%; display:block; margin-left: auto; margin-right: auto">
+    <ul>
+        <li><p>Speed: When it comes to speed, containers were meant to significantly reduce the time needed to deploy
+            and run an
+            application. The container starts immediately, since the operating system is already up and running, so the
+            application will start up without any noticeable delay. This is an excellent solution for a development
+            environment, mainly, as it saves time in the application testing cycle. On the other hand, virtual machines
+            need
+            to start the entire operating system, which includes the full boot process. This will also include the
+            startup
+            of the services, and it will take much longer than it would for a container.</p></li>
+
+        <li><p>Resources: Since virtual servers run separate operating systems, and every system call has to go through
+            the virtualization layer, a certain amount of overhead is created, causing more resources to be used. This
+            is particularly true for memory usage, as virtual machines consume memory even when they aren’t running any
+            user processes. However, CPU virtualization is relatively cheap, so the CPU overhead of a virtual machine
+            can be much smaller. When it comes to containers, they can start up pretty quickly, so their memory
+            consumption doesn't increase. There is also much less overhead as they are using the same operating system
+            without a hypervisor to go through.</p></li>
+
+        <li><p>Operating system requirements: A virtual machine is best used in the case when a business needs to run
+            multiple applications that require the full functionality of a dedicated operating system. However, if most
+            of the applications have the same operating system requirements, the containers would be a much more
+            practical solution.</p></li>
+
+    </ul>
+<h4>Summary</h4>
+    <hr>
+    <p>To summarize, we can see that each technology serves a different purpose and that choosing one depends heavily on
+        the user and application needs and server capacity. Since both virtualization and containerization come with
+        significant advantages and drawbacks, choosing one over the other needs to be done carefully with these points
+        in mind.</p>
+    <br>
+    <p>For detailed summary, please visit <a href="https://www.liquidweb.com/kb/virtualization-vs-containerization/">here</a></p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <hr>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
 
-          <p class="copyright text-muted">Copyright &copy; Rimpalbahen Suthar and Yan Yan 2021</p>
+                <p class="copyright text-muted">Copyright &copy; Rimpalbahen Suthar and Yan Yan 2021</p>
+            </div>
         </div>
-      </div>
     </div>
-  </footer>
+</footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="startbootstrap-clean-blog-gh-pages/vendor/jquery/jquery.min.js"></script>
-  <script src="startbootstrap-clean-blog-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="startbootstrap-clean-blog-gh-pages/vendor/jquery/jquery.min.js"></script>
+<script src="startbootstrap-clean-blog-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Custom scripts for this template -->
-  <script src="startbootstrap-clean-blog-gh-pages/js/clean-blog.min.js"></script>
+<!-- Custom scripts for this template -->
+<script src="startbootstrap-clean-blog-gh-pages/js/clean-blog.min.js"></script>
 </body>
 </html>
