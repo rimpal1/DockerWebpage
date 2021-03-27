@@ -1,10 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+
+    <title>Docker, Linux, and Containerization</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="startbootstrap-clean-blog-gh-pages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="startbootstrap-clean-blog-gh-pages/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+          type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="startbootstrap-clean-blog-gh-pages/css/clean-blog.min.css" rel="stylesheet">
+
 </head>
+
 <body>
 
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" data-toggle="collapse"
+                type="button">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutDOcker.html">Docker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="virtualization.html">Virtualization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="container.html">Containerization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comparison.html">Virtualization v/s Containerization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dockerSetup.html"><Strong>Setup docker</Strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="basicCommands.html">Basic linux commands</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dockerPycharm.html">Setup docker with Pycharm</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('startbootstrap-clean-blog-gh-pages/img/dsb.jpg')">
+    <div class="overlay"></div>
+    <div class="">
+        <div class="dockerSetup">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h3> Setup a Web Server on Local PC by Docker</h3>
+                    <span class="subheading"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="content container col-lg-8 col-md-10 mx-auto">
+    <h4>Install Docker Engine</h4>
+    <hr>
+    <p>If someone needs to go through the Docker installation, please watch <a
+            href="https://www.youtube.com/watch?v=R-ZMkGvh-9Y">this</a> video.</p>
+    <P><b>Key-step:</b> After the installation, you can run “<code>docker run hello-world</code>” to test your
+        installation. Below is a
+        screenshots when run this command successfully on Windows OS.</P>
+    <img alt="containerization" src="startbootstrap-clean-blog-gh-pages/img/Setup1.bmp"
+         style="width:60%; display:block; margin-left: auto; margin-right: auto">
+    <br>
+    <br>
+    <h4> Pull an Ubuntu image from Dockerhub</h4>
+    <hr>
+    <p><b>Key-step 1:</b> After logging into Docker, you can run “<code>docker pull ubuntu</code>” in your command line
+        window.</p>
+    <P><b>Key-step 2:</b> Use “<code>docker images</code>” to check existing Docker images on your computer.</P>
+    <img alt="containerization" src="startbootstrap-clean-blog-gh-pages/img/Setup2.png"
+         style="width:60%; display:block; margin-left: auto; margin-right: auto">
+    <br>
+    <br>
+    <h4> Commit Changes To A Docker Image With Examples</h4>
+    <hr>
+    <p><b>key-step 1:</b> Run the Ubuntu image to start a Docker container, then log into this Ubuntu
+        container:
+        Command:<code> docker run -it ubuntu:latest /bin/bash</code></p>
+    <P>&nbsp;&nbsp;&nbsp;&nbsp;The container ID is “1ee65e9d5595” in the screenshot.</P>
+    <img alt="containerization" src="startbootstrap-clean-blog-gh-pages/img/Setup3.png"
+         style="width:60%; display:block; margin-left: auto; margin-right: auto">
+
+
+    <p><b>Key-step 2:</b> Install applications in this Ubuntu container.</p>
+    <P> &nbsp;&nbsp;&nbsp;&nbsp;  1) Update system using command“<code>apt-get update</code>”.</P>
+    <P>  &nbsp;&nbsp;&nbsp;&nbsp; 2) Install apache2 using command“<code>apt-get install apache2</code>”.</P>
+    <p>  &nbsp;&nbsp;&nbsp;&nbsp; 3) Install vim text editor using command “<code>apt-get install vim</code>”.</p>
+
+    <p><b>Key-step 3:</b>Exit Ubuntu container using command "<code>exit</code>"</p>
+    <p><b>Key-step 4:</b> Commit container to create a new Docker image.</p>
+    <p> &nbsp;&nbsp;&nbsp;&nbsp;  1) Check the container using command “<code>docker ps -a</code>”</p>
+    <p> &nbsp;&nbsp;&nbsp;&nbsp;  2) Create a new Docker image using command “<code>docker commit 1ee65e9d5595 ubuntu-my_apache2</code>”.
+        “1ee65e9d5595” is the container ID and “ubuntu-my_apache2” is the name of a new
+        Docker image.</p>
+    <p> &nbsp;&nbsp; &nbsp;&nbsp; 3) Check the news images using “<code>docker images</code>”.</p>
+    <img alt="containerization" src="startbootstrap-clean-blog-gh-pages/img/Setup4.png"
+         style="width:60%; display:block; margin-left: auto; margin-right: auto">
+  <br>
+    <br>
+      <h4>Share Data Between a Docker Container and Host</h4>
+    <hr>
+    <p>Using command “<code>docker run -it -p 127.0.0.1:80:80 -v
+        H:\Docker_tutorial\local_dir:/var/www/html ubuntu-my_apache2 /bin/bash</code>”.</p>
+    <P>Parameter explanation:
+&nbsp;&nbsp;1) -it: log into an interactive shell
+&nbsp;&nbsp;2) -p: expose an port of Docker container.
+&nbsp;&nbsp;3) -v: bind a host directory to Docker container. “H:\Docker_tutoiral\local_dir” is a
+directory of the host computer, and “/var/www/htm” is the default location for the entry
+webpage of a website. &nbsp;&nbsp;Usually we put “index. Html” is this directory.</P>
+    <img alt="containerization" src="startbootstrap-clean-blog-gh-pages/img/Setup5.png"
+         style="width:60%; display:block; margin-left: auto; margin-right: auto">
+    <br>
+    <br>
+      <h4>vi Editor in UNIX</h4>
+    <hr>
+    <p><b>Key step 1:</b> check the present working directory using “<code>pwd</code>” then go the html directory “/var/www/htm”
+        using “<code>cd /var/www/html</code>”</p>
+    <P><b>Key step 2:</b> create an “index.html” file using “<code>vi index.html</code>”. Press “<code>i</code>” key to edit the new “index. Html”
+file. You can see “-- INSERT --” in the bottom of the command window, which means you can type html
+source code now. Try the shortcuts of vi to edit your file.</P>
+       <img alt="containerization" src="startbootstrap-clean-blog-gh-pages/img/Setup6.png"
+         style="width:60%; display:block; margin-left: auto; margin-right: auto">
+    <P>After finishing your “index.html” file, press the “ESC” key of your computer then type “<code>:wq</code>” to write the
+        file and then quit vi.</P>
+    <img alt="containerization" src="startbootstrap-clean-blog-gh-pages/img/Setup7.png"
+         style="width:60%; display:block; margin-left: auto; margin-right: auto">
+    <br>
+    <br>
+      <h4>Docker host a website</h4>
+    <hr>
+    <p><b>Key step 1:</b> Start apache service using “<code>/etc/init.d/apache2 restart</code>” in your Docker container.</p>
+    <P>Using a browser of you host computer to access “127.0.0.1”, then you can see your website!</P>
+       <img alt="containerization" src="startbootstrap-clean-blog-gh-pages/img/Setup8.png"
+         style="width:60%; display:block; margin-left: auto; margin-right: auto">
+
+    <br>
+    <br>
+<h4>Reference:</h4>
+    <p><a href="https://www.youtube.com/watch?v=2FOnngHmF7Y">Click here for a video on how to set up a web server using Docker.</a></p>
+</div>
+<!-- Footer -->
+<footer>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+
+                <p class="copyright text-muted">Copyright &copy; Rimpalbahen Suthar and Yan Yan 2021</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="startbootstrap-clean-blog-gh-pages/vendor/jquery/jquery.min.js"></script>
+<script src="startbootstrap-clean-blog-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="startbootstrap-clean-blog-gh-pages/js/clean-blog.min.js"></script>
 </body>
 </html>

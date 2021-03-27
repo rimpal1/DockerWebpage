@@ -1,10 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+
+    <title>Docker, Linux, and Containerization</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="startbootstrap-clean-blog-gh-pages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="startbootstrap-clean-blog-gh-pages/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+          type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="startbootstrap-clean-blog-gh-pages/css/clean-blog.min.css" rel="stylesheet">
+
 </head>
+
 <body>
 
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" data-toggle="collapse"
+                type="button">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutDOcker.html">Docker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="virtualization.html">Virtualization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="container.html">Containerization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comparison.html">Virtualization v/s Containerization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dockerSetup.html">Setup docker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="basicCommands.html"><Strong>Basic linux commands</Strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dockerPycharm.html">Setup docker with Pycharm</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('startbootstrap-clean-blog-gh-pages/img/bcb.jpg')">
+    <div class="overlay"></div>
+    <div class="">
+        <div class="basicCommands">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h3> Basic Linux Command & login Docker Container</h3>
+                    <span class="subheading"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="content container col-lg-8 col-md-10 mx-auto">
+
+    <h3>Basic Linux Commands: </h3>
+    <hr>
+    <p><b>1. pwd </b></p>
+    <p>Finds out the path of the current working directory (folder) you’re in. </p>
+    <p><b>2. cd</b></p>
+    <p>Navigates through directories. cd
+        goes to a folder located in your current path. You can also use <code>cd /folder1/folder1.1/destination
+            folder</code> for example.
+    </p>
+    <p><code>cd ..</code> (with two dots) to move one directory up</p>
+    <p><code>cd</code> to go straight to the home folder</p>
+    <p><code>cd-</code> (with a hyphen) to move to your previous directory</p>
+    <p>Note that Linux folders are case sensitive. </p>
+
+    <p><b>3. ls</b></p>
+    <p>The ls command is used to view the contents of a directory. By default, this command will display the contents of
+        your current working directory. </p>
+    <p>If you want to see the content of other directories, type ls and then the directory’s path. For example, enter
+        <code>ls
+            /home/username/Documents</code> to view the content of Documents. </p>
+    <p>There are variations you can use with the ls command: </p>
+    <p><code>ls -R</code> will list all the files in the sub-directories as well</p>
+    <p><code>ls -a</code> will show the hidden files</p>
+    <p><code>ls -al</code> will list the files and directories with detailed information like the permissions, size,
+        owner, etc. </p>
+
+    <p><b>4. cat</b></p>
+    <p>cat (short for concatenate) is one of the most frequently used commands in Linux. It is used to list the contents
+        of a file on the standard output (sdout). To run this command, type cat followed by the file’s name and its
+        extension. For instance: <code>cat file.txt</code>. </p>
+
+    <p><b>5. cp</b></p>
+    <p>Use the cp command to copy files from the current directory to a different directory. For instance, the
+        command<code>cp
+            scenery.jpg /home/username/Pictures</code> would create a copy of scenery.jpg (from your current directory)
+        into the
+        Pictures directory. </p>
+
+    <p><b>6. mkdir </b></p>
+    <p>Use <code>mkdir</code> command to make a new directory — if you type mkdir Music it will create a directory
+        called Music.
+    </p>
+    <p><b>7. rmdir </b></p>
+    <p>If you need to delete a directory, use the rmdir command. However, rmdir only allows you to delete empty
+        directories. </p>
+
+    <h3>How to Log into Docker Container: </h3>
+    <hr>
+    <h4>Prerequisites</h4>
+    <p> 1) A Linux system running Docker</p>
+    <p> 2) Preconfigured containers loaded and running</p>
+    <p> 3) Access to a terminal window/command prompt (Ctrl+Alt+T or Ctrl+Alt+F2)</p>
+    <p> 4) A user account with sudo privileges</p>
+    <h4>Use the docker attach Command to Connect to a Running Container</h4>
+    <P>The docker attach command links a local input, output, and error stream to a container. By default, it launches
+        in a bash shell. To connect to a running container, enter the following:</P>
+    <P><code>sudo docker attach Container_Name</code></P>
+    <p>In the example below, the system will connect to the nginx-test container:</p>
+    <p><code>sudo docker attach nginx-test</code></p>
+    <img alt="containerization" src="startbootstrap-clean-blog-gh-pages/img/Linux1.png"
+         style="width:60%; display:block; margin-left: auto; margin-right: auto">
+    <p>Once the command is executed, you will be working in the container. Any commands you run will affect the virtual
+        Docker environment.</p>
+    <br>
+    <br>
+    <h3>Reference: </h3>
+    <p>More Linux Commands: <a href="https://linuxconfig.org/linux-commands">https://linuxconfig.org/linux-commands</a>
+    </p>
+    <p>More methods to login Docker Container: <a href="https://www.youtube.com/watch?v=2FOnngHmF7Y">https://www.youtube.com/watch?v=2FOnngHmF7Y</a>
+    </p>
+
+</div>
+<!-- Footer -->
+<footer>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+
+                <p class="copyright text-muted">Copyright &copy; Rimpalbahen Suthar and Yan Yan 2021</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="startbootstrap-clean-blog-gh-pages/vendor/jquery/jquery.min.js"></script>
+<script src="startbootstrap-clean-blog-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="startbootstrap-clean-blog-gh-pages/js/clean-blog.min.js"></script>
 </body>
 </html>
