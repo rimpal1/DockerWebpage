@@ -86,7 +86,7 @@
     <hr>
     <p>If someone needs to go through the Docker installation, please watch <a
             href="https://www.youtube.com/watch?v=R-ZMkGvh-9Y">this</a> video.</p>
-    <P>Key-step: After the installation, you can run “<strong>docker run hello-world</strong>” to test your
+    <P><b>Key-step:</b> After the installation, you can run “<code>docker run hello-world</code>” to test your
         installation. Below is a
         screenshots when run this command successfully on Windows OS.</P>
     <img alt="containerization" src="startbootstrap-clean-blog-gh-pages/img/Setup1.bmp"
@@ -95,43 +95,43 @@
     <br>
     <h4> Pull an Ubuntu image from Dockerhub</h4>
     <hr>
-    <p>Key-step 1: After logging into Docker, you can run “<strong>docker pull ubuntu</strong>” in your command line
+    <p><b>Key-step 1:</b> After logging into Docker, you can run “<code>docker pull ubuntu</code>” in your command line
         window.</p>
-    <P>Key-step 2: Use “<strong>docker images</strong>” to check existing Docker images on your computer.</P>
+    <P><b>Key-step 2:</b> Use “<code>docker images</code>” to check existing Docker images on your computer.</P>
     <img alt="containerization" src="startbootstrap-clean-blog-gh-pages/img/Setup2.png"
          style="width:60%; display:block; margin-left: auto; margin-right: auto">
     <br>
     <br>
     <h4> Commit Changes To A Docker Image With Examples</h4>
     <hr>
-    <p>key-step 1: Run the Ubuntu image to start a Docker container, then log into this Ubuntu
+    <p><b>key-step 1:</b> Run the Ubuntu image to start a Docker container, then log into this Ubuntu
         container:
-        Command:<strong> docker run -it ubuntu:latest /bin/bash</strong></p>
+        Command:<code> docker run -it ubuntu:latest /bin/bash</code></p>
     <P>&nbsp;&nbsp;&nbsp;&nbsp;The container ID is “1ee65e9d5595” in the screenshot.</P>
     <img alt="containerization" src="startbootstrap-clean-blog-gh-pages/img/Setup3.png"
          style="width:60%; display:block; margin-left: auto; margin-right: auto">
 
 
-    <p>Key-step 2: Install applications in this Ubuntu container.</p>
-    <P> &nbsp;&nbsp;&nbsp;&nbsp;  1) Update system using command“<strong>apt-get update</strong>”.</P>
-    <P>  &nbsp;&nbsp;&nbsp;&nbsp; 2) Install apache2 using command“<strong>apt-get install apache2</strong>”.</P>
-    <p>  &nbsp;&nbsp;&nbsp;&nbsp; 3) Install vim text editor using command “<strong>apt-get install vim</strong>”.</p>
+    <p><b>Key-step 2:</b> Install applications in this Ubuntu container.</p>
+    <P> &nbsp;&nbsp;&nbsp;&nbsp;  1) Update system using command“<code>apt-get update</code>”.</P>
+    <P>  &nbsp;&nbsp;&nbsp;&nbsp; 2) Install apache2 using command“<code>apt-get install apache2</code>”.</P>
+    <p>  &nbsp;&nbsp;&nbsp;&nbsp; 3) Install vim text editor using command “<code>apt-get install vim</code>”.</p>
 
-    <p>Key-step 3:Exit Ubuntu container using command "<strong>exit</strong>"</p>
-    <p>Key-step 4: Commit container to create a new Docker image.</p>
-    <p> &nbsp;&nbsp;&nbsp;&nbsp;  1) Check the container using command “<strong>docker ps -a</strong>”</p>
-    <p> &nbsp;&nbsp;&nbsp;&nbsp;  2) Create a new Docker image using command “<strong>docker commit 1ee65e9d5595 ubuntu-my_apache2</strong>”.
+    <p><b>Key-step 3:</b>Exit Ubuntu container using command "<code>exit</code>"</p>
+    <p><b>Key-step 4:</b> Commit container to create a new Docker image.</p>
+    <p> &nbsp;&nbsp;&nbsp;&nbsp;  1) Check the container using command “<code>docker ps -a</code>”</p>
+    <p> &nbsp;&nbsp;&nbsp;&nbsp;  2) Create a new Docker image using command “<code>docker commit 1ee65e9d5595 ubuntu-my_apache2</code>”.
         “1ee65e9d5595” is the container ID and “ubuntu-my_apache2” is the name of a new
         Docker image.</p>
-    <p> &nbsp;&nbsp; &nbsp;&nbsp; 3) Check the news images using “<strong>docker images</strong>”.</p>
+    <p> &nbsp;&nbsp; &nbsp;&nbsp; 3) Check the news images using “<code>docker images</code>”.</p>
     <img alt="containerization" src="startbootstrap-clean-blog-gh-pages/img/Setup4.png"
          style="width:60%; display:block; margin-left: auto; margin-right: auto">
   <br>
     <br>
       <h4>Share Data Between a Docker Container and Host</h4>
     <hr>
-    <p>Using command “<strong>docker run -it -p 127.0.0.1:80:80 -v
-        H:\Docker_tutorial\local_dir:/var/www/html ubuntu-my_apache2 /bin/bash</strong>”.</p>
+    <p>Using command “<code>docker run -it -p 127.0.0.1:80:80 -v
+        H:\Docker_tutorial\local_dir:/var/www/html ubuntu-my_apache2 /bin/bash</code>”.</p>
     <P>Parameter explanation:
 &nbsp;&nbsp;1) -it: log into an interactive shell
 &nbsp;&nbsp;2) -p: expose an port of Docker container.
@@ -144,14 +144,14 @@ webpage of a website. &nbsp;&nbsp;Usually we put “index. Html” is this direc
     <br>
       <h4>vi Editor in UNIX</h4>
     <hr>
-    <p>Key step 1: check the present working directory using “pwd” then go the html directory “/var/www/htm”
-using “cd /var/www/html”</p>
-    <P>Key step 2: create an “index.html” file using “vi index.html”. Press “i” key to edit the new “index. Html”
+    <p><b>Key step 1:</b> check the present working directory using “<code>pwd</code>” then go the html directory “/var/www/htm”
+        using “<code>cd /var/www/html</code>”</p>
+    <P><b>Key step 2:</b> create an “index.html” file using “<code>vi index.html</code>”. Press “<code>i</code>” key to edit the new “index. Html”
 file. You can see “-- INSERT --” in the bottom of the command window, which means you can type html
 source code now. Try the shortcuts of vi to edit your file.</P>
        <img alt="containerization" src="startbootstrap-clean-blog-gh-pages/img/Setup6.png"
          style="width:60%; display:block; margin-left: auto; margin-right: auto">
-    <P>After finishing your “index.html” file, press the “ESC” key of your computer then type “:wq” to write the
+    <P>After finishing your “index.html” file, press the “ESC” key of your computer then type “<code>:wq</code>” to write the
         file and then quit vi.</P>
     <img alt="containerization" src="startbootstrap-clean-blog-gh-pages/img/Setup7.png"
          style="width:60%; display:block; margin-left: auto; margin-right: auto">
@@ -159,14 +159,14 @@ source code now. Try the shortcuts of vi to edit your file.</P>
     <br>
       <h4>Docker host a website</h4>
     <hr>
-    <p>Key step 1: Start apache service using “/etc/init.d/apache2 restart” in your Docker container.</p>
+    <p><b>Key step 1:</b> Start apache service using “<code>/etc/init.d/apache2 restart</code>” in your Docker container.</p>
     <P>Using a browser of you host computer to access “127.0.0.1”, then you can see your website!</P>
        <img alt="containerization" src="startbootstrap-clean-blog-gh-pages/img/Setup8.png"
          style="width:60%; display:block; margin-left: auto; margin-right: auto">
 
     <br>
     <br>
-
+<h4>Reference:</h4>
     <p><a href="https://www.youtube.com/watch?v=2FOnngHmF7Y">Click here for a video on how to set up a web server using Docker.</a></p>
 </div>
 <!-- Footer -->
